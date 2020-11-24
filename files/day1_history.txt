@@ -1,0 +1,241 @@
+  587  ls
+  588  pwd
+  589  ls -F
+  590  ls data-shell
+  591  pwd
+  592  ls data-shell/north-pacific-gyre
+  593  ls data-shell/north-pacific-gyre/2012-07-03
+  594  ls -F data-shell/north-pacific-gyre/2012-07-03
+  595  cd data-shell
+  596  pwd
+  597  ls
+  598  cd molecules
+  599  pwd
+  600  ls
+  601  cd ..
+  602  pwd
+  603  cd ..
+  604  pwd
+  605  cd ..
+  606  pwd
+  607  cd ..
+  608  pwd
+  609  cd ..
+  610  pwd
+  611  ls -F
+  612  cd /Users/bretbeheim/Desktop/data-shell
+  613  pwd
+  614  ls
+  615  cd north-pacific-gyre/
+  616  ls
+  617  cd ..
+  618  ls
+  619  pwd
+  620  ls
+  621  cd molecules/
+  622  ls
+  623  cd ..
+  624  ls --help
+  625  ls -help
+  626  man ls
+  627  man pwd
+  628  ls -l
+  629  ls
+  630  ls -l -h
+  631  ls -lh
+  632  cd ~
+  633  pwd
+  634  cd ~/Desktop
+  635  cd /Users/bretbeheim/Desktop
+  636  cd .
+  637  wd
+  638  pwd
+  639  ls
+  640  cd ./data-shell
+  641  pwd
+  642  mkdir thesis
+  643  ls -F
+  644  mkdir thesis/chapter_1
+  645  mkdir thesis/chapter_1/section_1/subsection_1
+  646  mkdir -p thesis/chapter_1/section_1/subsection_1
+  647  cd thesis
+  648  nano draft.txt
+  649  ls
+  650  cat draft.txt
+  651  mv
+  652  cp
+  653  ls
+  654  mv draft.txt ch1_draft.txt
+  655  ls
+  656  cat ch1_draft.txt 
+  657  mv ch1_draft.txt chapter_1/
+  658  ls
+  659  ls chapter_1
+  660  cp ch1_draft.txt ch1_draft_copy.txt
+  661  ls
+  662  cd chapter_1
+  663  ls
+  664  cp ch1_draft.txt ch1_draft_copy.txt
+  665  ls
+  666  cat ch1_draft.txt
+  667  cat ch1_draft_copy.txt
+  668  ls
+  669  nano ch1_draft.tx
+  670  ls
+  671  nano ch1_draft.txt
+  672  cat ch1_draft.txt
+  673  rm -i ch1_draft_copy.txt
+  674  ls
+  675  rm section_1
+  676  ls
+  677  rm -r section_1
+  678  ls
+  679  pwd
+  680  cd ..
+  681  pwd
+  682  ls
+  683  cd data
+  684  ls
+  685  ls -F
+  686  mkdir backup
+  687  cp amino-acids.txt animals.txt backup/
+  688  ls backup
+  689  ls
+  690  ls *.txt
+  691  cd ..
+  692  ls
+  693  cd molecules
+  694  ls
+  695  ls *ethane.pdb
+  696  ls ?ethane.pdb
+  697  ls ???ane.pdb
+  698  ls
+  699  cp propane.pdb .
+  700  nano values.txt
+  701  cat values.txt
+  702  sort values.txt
+  703  sort -n values.txt
+  704  history
+  705  cd ..
+  706  pwd
+  707  history > day1_history.txt
+  708  cat day1_history.txt
+  709  cd data-shell
+  710  cd molecules
+  711  ls
+  712  cat values.txt
+  713  sort values.txt
+  714  sort -n values.txt
+  715  wc values.txt
+  716  wc -l values.txt
+  717  wc -m values.txt
+  718  wc -w values.txt
+  719  ls
+  720  cat cubane.pdb
+  721  wc cubane.pdb
+  722  wc -l *.pdb
+  723  wc -l *.pdb > lengths.txt
+  724  cat lengths.txt
+  725  sort -n lengths.txt
+  726  sort -n lengths.txt > sorted-lengths.txt
+  727  cat lengths.txt
+  728  cat sorted-lengths.txt
+  729  wc -l *.pdb > lengths.txt
+  730  sort -n lengths.txt > sorted-lengths.txt
+  731  wc -l *.pdb | sort -n
+  732  wc -l *.pdb | sort -n > sorted-lengths.txt
+  733  cat sorted-lengths.txt 
+  734  head -n 1 sorted-length.txt
+  735  head -n 1 sorted-lengths.txt
+  736  head -n 2 sorted-lengths.txt
+  737  head -n 3 sorted-lengths.txt
+  738  tail -n 1 sorted-lengths.txt
+  739  tail -n 2 sorted-lengths.txt
+  740  head -n 5 sorted-lengths.txt | tail -n 1
+  741  cat sorted-lengths.txt
+  742  wc -l *.pdb | sort -n | head -n 1
+  743  ls
+  744  pwd
+  745  cd ..
+  746  ls
+  747  cd north-pacific-gyre/
+  748  ls
+  749  cd 2012-07-03/
+  750  ls
+  751  ls -F
+  752  wc -l *.txt | sort -n | head -n 5
+  753  wc -l *.txt | sort -n | tail -n 5
+  754  ls *Z.txt
+  755  ls *[AB].txt
+  756  ls *[!AB].txt
+  757  cd ..
+  758  ls
+  759  cd creatures
+  760  ls
+  761  cat basilisk.dat 
+  762  head -n 10 basilisk.dat 
+  763  head -n 2 basilisk.dat | tail -n 1
+  764  ls
+  765  for filename in basilisk.dat minotaur.dat unicorn.dat;  echo FE667161 && echo $HISTCONTROL && /usr/bin/env && echo B2EB2BCB
+  766  for filename in basilisk.dat minotaur.dat unicorn.dat;  echo FE667161 && echo $HISTCONTROL && /usr/bin/env && echo B2EB2BCB
+  767  for filename in in basilisk.dat minotaur.dat unicorn.dat; do   head -n 2 $filename | tail -n 1; done
+  768  for filename in basilisk.dat minotaur.dat unicorn.dat; do head -n 2 $filename | tail -n 1; done
+  769  for filename in *.dat; do   head -n 2 $filename | tail -n 1; done
+  770  for filename in *.dat; do   head -n 2 $filename | tail -n 1; done > creature_classifications.txt
+  771  cat creature_classifications.txt 
+  772  for classinfo in *.dat; do   head -n 2 $classinfo | tail -n 1; done
+  773  for datinfo in *.dat; do   head -n 2 $datinfo | tail -n 1; done
+  774  for datinfo in *.dat; do   echo head -n 2 $datinfo | tail -n 1; done
+  775  cd ..
+  776  cd molecules
+  777  ls
+  778  cd ..
+  779  ls
+  780  cd north-pacific-gyre/
+  781  for datafile in NENE*[AB].txt; do   echo $datafile; done
+  782  ls
+  783  cd 2012-07-03
+  784  ls
+  785  for datafile in NENE*[AB].txt; do   echo $datafile; done
+  786  for datafile in NENE*[AB].txt;  echo FE667161 && echo $HISTCONTROL && /usr/bin/env && echo B2EB2BCB
+  787  for datafile in NENE*[AB].txt; do   echo $datafile stats-$datafile; done
+  788  for datafile in NENE*[AB].txt; do bash goostats $datafile stats-$datafile; done
+  789  for datafile in NENE*[AB].txt; do   echo $datafile;   bash goostats $datafile stats-$datafile; done
+  790  echo hello there
+  791  ls -F
+  792  bash goostats NENE01729A.txt stats-NENE01729A.txt
+  793  bash goostats NENE01729B.txt stats-NENE01729B.txt
+  794  cd ..
+  795  cd molecules
+  796  ls
+  797  rm *.txt
+  798  ls
+  799  nano middle.sh
+  800  ls
+  801  ls -F
+  802  cat middle.sh
+  803  bash middle.sh
+  804  head -n 15 octane.pdb | tail -n 5
+  805  nano middle.sh
+  806  bash middle.sh octane.pdb
+  807  bash middle.sh methane.pdb
+  808  ls
+  809  bash middle.sh cubane.pdb
+  810  cat middle.sh
+  811  nano middle.sh
+  812  bash middle.sh cubane.pdb 15 5
+  813  bash middle.sh cubane.pdb 15 2
+  814  bash middle.sh cubane.pdb 15 1
+  815  bash middle.sh cubane.pdb 15 4
+  816  ./middle.sh cubane.pdb 15 4
+  817  cd ..
+  818  cd north-pacific-gyre/2012-07-03/
+  819  ls
+  820  nano do-stats.sh
+  821  cat do-stats.sh
+  822  nano do-stats.sh
+  823  cat do-stats.sh
+  824  bash do-stats.sh
+  825  cat do-stats.sh
+  826  cd ~/Desktop
+  827  history > day1_history.txt 
