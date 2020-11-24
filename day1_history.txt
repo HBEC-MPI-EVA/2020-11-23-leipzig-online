@@ -1,4 +1,8 @@
 # terminal input history for day 1 of HBEC software carpentry course
+# instructor: Bret Beheim
+
+## Navigating Files and Directories
+## https://swcarpentry.github.io/shell-novice/02-filedir/index.html
 
 ls
 pwd
@@ -37,8 +41,8 @@ ls
 cd molecules/
 ls
 cd ..
+
 ls --help
-ls -help
 man ls
 man pwd
 ls -l
@@ -53,6 +57,10 @@ cd .
 wd
 pwd
 ls
+
+## Working With Files and Directories
+## https://swcarpentry.github.io/shell-novice/03-create/index.html
+
 cd ./data-shell
 pwd
 mkdir thesis
@@ -91,6 +99,10 @@ ls
 rm section_1
 ls
 rm -r section_1
+
+## Pipes and Filters
+## https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html
+
 ls
 pwd
 cd ..
@@ -170,6 +182,10 @@ wc -l *.txt | sort -n | tail -n 5
 ls *Z.txt
 ls *[AB].txt
 ls *[!AB].txt
+
+## Loops
+## https://swcarpentry.github.io/shell-novice/05-loop/index.html
+
 cd ..
 ls
 cd creatures
@@ -178,8 +194,6 @@ cat basilisk.dat
 head -n 10 basilisk.dat 
 head -n 2 basilisk.dat | tail -n 1
 ls
-for filename in basilisk.dat minotaur.dat unicorn.dat;  echo FE667161 && echo $HISTCONTROL && /usr/bin/env && echo B2EB2BCB
-for filename in basilisk.dat minotaur.dat unicorn.dat;  echo FE667161 && echo $HISTCONTROL && /usr/bin/env && echo B2EB2BCB
 for filename in in basilisk.dat minotaur.dat unicorn.dat; do   head -n 2 $filename | tail -n 1; done
 for filename in basilisk.dat minotaur.dat unicorn.dat; do head -n 2 $filename | tail -n 1; done
 for filename in *.dat; do   head -n 2 $filename | tail -n 1; done
@@ -196,10 +210,10 @@ ls
 cd north-pacific-gyre/
 for datafile in NENE*[AB].txt; do   echo $datafile; done
 ls
+# woops, I'm in the wrong working directory
 cd 2012-07-03
 ls
 for datafile in NENE*[AB].txt; do   echo $datafile; done
-for datafile in NENE*[AB].txt;  echo FE667161 && echo $HISTCONTROL && /usr/bin/env && echo B2EB2BCB
 for datafile in NENE*[AB].txt; do   echo $datafile stats-$datafile; done
 for datafile in NENE*[AB].txt; do bash goostats $datafile stats-$datafile; done
 for datafile in NENE*[AB].txt; do   echo $datafile;   bash goostats $datafile stats-$datafile; done
@@ -207,6 +221,10 @@ echo hello there
 ls -F
 bash goostats NENE01729A.txt stats-NENE01729A.txt
 bash goostats NENE01729B.txt stats-NENE01729B.txt
+
+## Shell Scripts
+## https://swcarpentry.github.io/shell-novice/06-script/index.html
+
 cd ..
 cd molecules
 ls
