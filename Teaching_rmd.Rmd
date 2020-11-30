@@ -1,0 +1,230 @@
+---
+title: "gapminder_teaching_rmd"
+author: "Sarah Pederzani"
+date: "26 11 2020"
+output:
+  html_document:
+    keep_md: true
+---
+
+
+# Markdown formatting
+
+markdown is a markup language that is a lightweit way of formatting text
+
+bold - **bold**
+italic - *italics*
+subscript - H~2~O
+superscript - ^14^C
+
+bulleted lists
+
+* listpoint 1
+* oh look more listed stuff
+* lists all the way down
+
+or use
+
+- look at my awesome bullet point
+- lists so nice to tidy
+
+numbered lists
+
+1. first point
+2. second point
+3. third point
+4. many points
+
+section headings
+
+# Title
+## Main section
+### sub-section
+#### sub-sub section
+
+## Compiling
+
+push the knit button to compile
+
+### Challenge 1
+
+delete all the code chunks and write some markdown
+then compile to a html document
+
+## More Markdown
+
+putting a hyperlink - 
+[our course website](https://hbec-mpi-eva.github.io/2020-11-23-leipzig-online/)
+
+including an image
+![caption](https://smea.uw.edu/wp-content/uploads/sites/11/2017/03/CURRENTSBLOG_Cat_2.jpg)
+or
+![caption](compiling_workflow.png)
+
+Latex equations with Latex math mode
+
+Put some inline Latex math mode like so $E = mc^2$
+
+Or put separated equations like this:
+
+$$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
+
+## Code chunks
+
+a code chunk example
+
+```{r load_data}
+gapminder <- read.csv("data/gapminder_data.csv")
+```
+
+accents denote the chunk
+r denotes the programming language
+followed by the chunk name - use unique chunk names that are descriptive of what you're doing in the chunk
+
+### Challenge 2
+
+add code chunks to
+- load the ggplot2 package
+- read the gapminder data
+- create a plot
+
+#### Solution
+
+```{r load-ggplot2}
+
+library("ggplot2") # loading ggplot2
+
+```
+
+```{r read-gapminder-data}
+
+gapminder <- read.csv("data/gapminder_data.csv") # read in gapminder data
+
+```
+
+```{r make-plot}
+
+ggplot(gapminder, aes(x = year, y = lifeExp))+ # plot life exp vs year
+  geom_point()
+
+```
+
+
+## How are things compiled
+
+talk about the knitting and compilation workflow with image
+
+## Chunk options
+
+options that control how chunks are trated
+
+examples:
+
+echo = FALSE - supress code printing
+results = "hide" - print results
+eval = FALSE - show code but don't evaluate the code
+warning = FALSE - don't print warnings
+message = FALSE - don't print messages (i.e. package loading messages)
+fig.height - figure height (in inches)
+fig.width - figure width (in inches)
+fig.cap - figure caption
+
+so for example
+
+```{r load_libraries, echo = FALSE, message = FALSE, warning = FALSE}
+
+library("dplyr")
+
+library("ggplot2")
+
+```
+
+### global chunk options
+
+you can use a first chunk in your document to specific global chunk options
+that are applied to every chunk in your document
+
+```{r global_options, echo = FALSE}
+
+knitr::opts_chunk$set(fig.path = "Figs/", message = FALSE, warning = FALSE,
+                      echo = FALSE)
+
+```
+
+the option fig.path will set where figures will be saved
+
+you can use yaml options to automatically keep a copy of all your figures
+
+output:
+  html_document:
+    keep_md: true
+
+figures will be named with the code chunk name
+
+you can also use something like fig.path = "Figs/analysis_" which will make all figure file names start with "analysis_"
+
+### Challenge 3
+
+use chunk options to control the site of a figure and to hide the code
+
+```{r echo = FALSE, fig.width = 3}
+
+plot(faithful)
+
+```
+
+## Inline R Code
+
+use inline code like this
+
+The population of Afghanistan was `r gapminder[1,3]` in `r gapminder[1,2]`. 
+
+### Challenge 4
+
+try some inline R code
+
+#### Solution
+
+Here’s some inline code to determine that 2 + 2 = `r 2+2`.
+
+## optional: tables
+
+make tables using the kable function that is included in the knitr package
+
+
+```{r table}
+library("knitr")
+
+gapminder_subset <- gapminder[1:5,]
+
+kable(gapminder_subset)
+
+```
+
+## Other output formats
+
+pdf or docx output
+
+is specified in the yaml header using 
+
+output:pdf_document
+
+or
+
+output:word_document
+
+
+## links to RMd papers
+
+
+Shannon:
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0190195#sec007
+
+Marcel
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0241714#sec006
+
+
+
+
+
+
